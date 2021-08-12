@@ -36,7 +36,7 @@ namespace WinFormsApp
             p2.X = x * cos - p2.Y * sin + p.X * (1 - cos) + p.Y * sin;
             p2.Y = x * sin + p2.Y * cos - p.X * sin + p.Y * (1 - cos);
         }
-
+        
         static public void Scale(Point3D p, Point3D p2, double k)
         {
             p2.X = (float)(k * p2.X + p.X * (1 - k));
