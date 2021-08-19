@@ -21,7 +21,26 @@ namespace WinFormsApp
 
         public Lightning(Lightning light)
         {
+            SubModels = new List<List<Point3D>>();
+            Model = new List<Point3D>();
 
+            for (int i = 0; i < light.SubModels.Count; i++)
+            {
+                SubModels.Add(new List<Point3D>());
+                for (int j = 0; j < light.SubModels[i].Count; j++)
+                {
+                    SubModels[i].Add(new Point3D(light.SubModels[i][j].X,
+                                                 light.SubModels[i][j].Y, 
+                                                 light.SubModels[i][j].Z));
+                }
+            }
+
+            for (int i = 0; i < light.Model.Count; i++)
+            {
+                Model.Add(new Point3D(light.Model[i].X,
+                                      light.Model[i].Y,
+                                      light.Model[i].Z));
+            }
         }
 
         public Lightning(IEnumerable<Point3D> model,
