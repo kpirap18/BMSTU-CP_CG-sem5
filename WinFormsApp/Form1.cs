@@ -85,5 +85,16 @@ namespace WinFormsApp
         {
 
         }
+
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            label1.Text = String.Format("{0} Кл/м^3", trackBar1.Value);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

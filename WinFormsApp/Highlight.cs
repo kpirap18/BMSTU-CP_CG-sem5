@@ -7,7 +7,7 @@ namespace WinFormsApp
 {
     class Highlight
     {
-        public Highlight(Lighting lght, Window win, int w, int h)
+        public Highlight(Lightning lght, Window win, int w, int h)
         {
             Edge = new Point3D[2];
 
