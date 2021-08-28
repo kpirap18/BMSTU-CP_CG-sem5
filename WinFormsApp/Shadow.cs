@@ -44,8 +44,8 @@ namespace WinFormsApp
                     per.Y = 500;
                     per.Z = (float)(ray.Beg.Z + ray.Vec.Z * t);
 
-                    Transform.TurnY(c, per, y);
-                    Transform.TurnX(c, per, -15);
+                    Transform.TurnY(cen, per, y);
+                    Transform.TurnX(cen, per, -15);
 
                     pol[j] = per.PointF;
                 }

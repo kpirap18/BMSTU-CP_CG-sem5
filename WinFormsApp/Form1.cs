@@ -78,23 +78,8 @@ namespace WinFormsApp
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
             _scene.Kol = int.Parse(toolStripTextBox1.Text);
-            _scene.FloarChange();
-        }
+            _scene.FLoarChange();
+        }  
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void trackBar2_Scroll(object sender, EventArgs e)
-        {
-            label1.Text = String.Format("{0} Кл/м^3", trackBar1.Value);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -45,7 +45,7 @@ namespace WinFormsApp
 
                 gr.DrawLine(new Pen(Color.Black),
                             (Points[0].X + Points[3].X) / 2, (Points[0].Y + Points[3].Y) / 2,
-                            (Points[2].X + Points[1].X) / 2, (Points[2].Y + Points[1].Y) / 2)
+                            (Points[2].X + Points[1].X) / 2, (Points[2].Y + Points[1].Y) / 2);
 
 
             }

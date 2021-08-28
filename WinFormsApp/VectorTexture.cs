@@ -11,7 +11,7 @@ namespace WinFormsApp
         public VectorTexture(TextureType textype, PointF[] pol)
         {
             Tt = textype;
-            _im = Image.FromFile("");
+            _im = Image.FromFile("3.jpg");
 
             Tb = new TextureBrush(_im);
             pol.CopyTo(_pol, 0);
