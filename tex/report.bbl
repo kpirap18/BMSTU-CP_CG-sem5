@@ -1,0 +1,277 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{path-traced-movies}
+\selectlanguageifdefined{russian}
+The Path to Path-Traced Movies [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://graphics.pixar.com/library/PathTracedMovies/paper.pdf} (дата
+  обращения: 15.11.2020).
+
+\bibitem{quantum-computers-speed-up}
+\selectlanguageifdefined{russian}
+Yuri Ozhigov, Quantum Computers Speed Up Classical with Probability Zero, Chaos
+  Solitons Fractals 10 (1999) 1707—1714.
+\newblock Режим доступа: \url{xxx.lanl.gov/abs/quant-ph/9803064}
+  (дата обращения: 15.11.2020).
+
+\bibitem{what-is-noise}
+\selectlanguageifdefined{russian}
+Stroebel, Leslie; Zakia, Richard D. The Focal encyclopedia of photography.
+  Focal Press. стр. 507.
+\newblock 1995.
+
+\bibitem{PQC-classic}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 211 -- 212 с.
+\newblock 2019.
+
+\bibitem{qsp}
+\selectlanguageifdefined{russian}
+Joint Quantum Institute -- Quantum Superposition [Электронный
+  ресурс].
+\newblock Режим доступа:
+  \url{https://jqi.umd.edu/glossary/quantum-superposition} (дата
+  обращения: 01.11.2020).
+
+\bibitem{qtheory}
+\selectlanguageifdefined{russian}
+Heisenberg W. Criticisms and Counterproposals to the Copenhagen Interpretation
+  of Quantum Theory // Physics and Philosophy: The Revolution in Modern
+  Science. стр. 102.
+\newblock 2007.
+
+\bibitem{state}
+\selectlanguageifdefined{russian}
+Quantum computers: state of development and areas of application.
+  [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://www.lead-innovation.com/english-blog/quantum-computers-state-of-development}
+  (дата обращения: 27.11.2020).
+
+\bibitem{emulating}
+\selectlanguageifdefined{russian}
+Quantum computer emulated by a classical system. [Электронный
+  ресурс].
+\newblock Режим доступа:
+  \url{https://phys.org/news/2015-05-quantum-emulated-classical.html} (дата
+  обращения: 27.11.2020).
+
+\bibitem{PQC-limits}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 8 -- 9 с.
+\newblock 2019.
+
+\bibitem{global-phase}
+\selectlanguageifdefined{russian}
+IBM Quantum Experience - Quantum phase [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://quantum-computing.ibm.com/docs/iqx/guide/introducing-qubit-phase}
+  (дата обращения: 21.09.2020).
+
+\bibitem{PQC-amplitude}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 107 -- 123 с.
+\newblock 2019.
+
+\bibitem{PQC-logic}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 85 -- 106 с.
+\newblock 2019.
+
+\bibitem{PQC-furie}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 147 -- 148 с.
+\newblock 2019.
+
+\bibitem{signal}
+\selectlanguageifdefined{russian}
+Rao, R. Signals and Systems. Prentice-Hall Of India Pvt. Limited, стр 152.
+\newblock 2008.
+
+\bibitem{PQC-furie-proof}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 149 с.
+\newblock 2019.
+
+\bibitem{PQC-prcnt}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 223 -- 227 с.
+\newblock 2019.
+
+\bibitem{PQC-fourier}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 125 -- 153 с.
+\newblock 2019.
+
+\bibitem{PQC-qbits}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 220 -- 223 с.
+\newblock 2019.
+
+\bibitem{PQC-color}
+\selectlanguageifdefined{russian}
+Programming Quantum Computers. Eric R. Johnston, Nic Harrigan, and Mercedes
+  Gimeno-Segovia, 232 -- 233 с.
+\newblock 2019.
+
+\bibitem{quantum-computer}
+\selectlanguageifdefined{russian}
+Квантовый компьютер. Ю. И. Ожигов.
+  [Электронный ресурс].
+\newblock URL: \url{http://sqi.cs.msu.ru/files/glava_1.pdf} (дата
+  обращения: 27.11.2020).
+\newblock 2017.
+
+\bibitem{decog}
+\selectlanguageifdefined{russian}
+Квантовая физика: декогеренция.
+  [Электронный ресурс].
+\newblock URL: \url{https://habr.com/ru/post/449888/} (дата
+  обращения: 10.12.2020).
+
+\bibitem{quantum-codes}
+\selectlanguageifdefined{russian}
+Квантовые коды, исправляющие ошибки.
+  [Электронный ресурс].
+\newblock URL:
+  \url{https://cyberleninka.ru/article/n/kvantovye-kody-ispravlyayuschie-oshibki}
+  (дата обращения: 28.11.2020).
+\newblock 2017.
+
+\bibitem{feynman}
+\selectlanguageifdefined{russian}
+Richard P.Feynman, Simulatin gPhysicswith Computers, International Journal of
+  Theoretical Physics.
+\newblock 1982.
+
+\bibitem{qmemory}
+\selectlanguageifdefined{russian}
+The Greatest Challenge of Modeling Large Quantum Computers
+  [Электронный ресурс].
+\newblock Режим доступа:
+  \url{https://serokell.io/blog/modeling-large-quantum-computers} (дата
+  обращения: 01.11.2020).
+
+\bibitem{habr-quantum-computers}
+\selectlanguageifdefined{russian}
+Как работают квантовые компьютеры.
+  Собираем паззл. [Электронный ресурс].
+\newblock URL: \url{https://habr.com/ru/post/480480/} (дата
+  обращения: 02.12.2020).
+
+\bibitem{umatrix}
+\selectlanguageifdefined{russian}
+Ivanova, O. A., <<Unitary matrix>>, Encyclopedia of Mathematics.
+\newblock 2001.
+
+\bibitem{quantum-supremacy}
+\selectlanguageifdefined{russian}
+Quantum supremacy using a programmable superconducting processor
+  [Электронный ресурс].
+\newblock URL: \url{https://www.nature.com/articles/s41586-019-1666-5}
+  (дата обращения: 27.11.2020).
+
+\bibitem{binary-search}
+\selectlanguageifdefined{russian}
+Knuth §6.2.1 (<<Searching an ordered table>>), subsection <<Binary search>>.
+\newblock 1998.
+
+\bibitem{js}
+\selectlanguageifdefined{russian}
+JavaScript -- official site. [Электронный ресурс].
+\newblock URL: \url{https://www.javascript.com/} (дата обращения:
+  01.12.2020).
+
+\bibitem{qcengine}
+\selectlanguageifdefined{russian}
+QCEngine -- quantum computer simulator. [Электронный ресурс].
+\newblock URL: \url{https://oreilly-qc.github.io/docs/build/index.html}
+  (дата обращения: 26.10.2020).
+
+\bibitem{nodejs}
+\selectlanguageifdefined{russian}
+Node.js -- official site. [Электронный ресурс].
+\newblock URL: \url{https://nodejs.org/en/} (дата обращения:
+  01.12.2020).
+
+\bibitem{node-gtk}
+\selectlanguageifdefined{russian}
+GNOME Gtk+ bindings for NodeJS. [Электронный ресурс].
+\newblock URL: \url{https://www.npmjs.com/package/node-gtk} (дата
+  обращения: 20.11.2020).
+
+\bibitem{node-canvas}
+\selectlanguageifdefined{russian}
+Cairo-backed Canvas implementation for Node.js. [Электронный
+  ресурс].
+\newblock URL: \url{https://www.npmjs.com/package/canvas} (дата
+  обращения: 20.11.2020).
+
+\bibitem{jest}
+\selectlanguageifdefined{russian}
+Jest -- Delightful JavaScript Testing. [Электронный ресурс].
+\newblock URL: \url{https://jestjs.io} (дата обращения:
+  01.12.2020).
+
+\bibitem{utests}
+\selectlanguageifdefined{russian}
+Kolawa, Adam; Huizinga, Dorota. Automated Defect Prevention: Best Practices in
+  Software Management. Wiley-IEEE Computer Society Press, стр. 75.
+\newblock 2007.
+
+\bibitem{ftests}
+\selectlanguageifdefined{russian}
+Kaner, Falk, Nguyen. Testing Computer Software. Wiley Computer Publishing,
+  стр. 42.
+\newblock 1999.
+
+\bibitem{eslint}
+\selectlanguageifdefined{russian}
+ESLint -- Pluggable JavaScript linter. [Электронный ресурс].
+\newblock URL: \url{https://eslint.org} (дата обращения:
+  01.12.2020).
+
+\bibitem{vscode}
+\selectlanguageifdefined{russian}
+Visual Studio Code - Code Editing. Redefined. [Электронный
+  ресурс].
+\newblock URL: \url{https://code.visualstudio.com} (дата
+  обращения: 01.12.2020).
+
+\bibitem{why-ide}
+\selectlanguageifdefined{russian}
+Rebus community -- Integrated Development Environment [Электронный
+  ресурс].
+\newblock Режим доступа:
+  \url{https://press.rebus.community/programmingfundamentals/chapter/integrated-development-environment/}
+  (дата обращения: 10.12.2020).
+
+\bibitem{mc-complexity}
+\selectlanguageifdefined{russian}
+Computational complexity analysis for Monte Carloapproximations of classically
+  scaled population processes.
+\newblock 2018.
+
+\bibitem{computation-complexity}
+\selectlanguageifdefined{russian}
+Sipser, Michael. Introduction to the Theory of Computation. Course Technology
+  Inc.
+\newblock 2006.
+
+\end{thebibliography}
