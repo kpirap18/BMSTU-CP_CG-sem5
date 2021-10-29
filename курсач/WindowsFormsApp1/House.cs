@@ -19,11 +19,11 @@ namespace WindowsFormsApp1
             _kol = count;
             _center = new Point3D();
             _center = c;
-            S = new Side[5];
+            S = new Side[8];
             La = new Point3D[2];
-            const int l = 40;
+            const int l = 60;
             int height = 36 * count;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 8; i++)
             {
                 S[i].P = new Point3D[4];
                 for (int j = 0; j < 4; j++)
@@ -41,6 +41,7 @@ namespace WindowsFormsApp1
             S[3].P[0].Z = -l;
             S[0].P[0].Y = h / 3 * 2 + 100;
             S[3].P[1] = new Point3D(S[0].P[0].X, S[0].P[0].Y, S[0].P[0].Z);
+
             for (int i = 1; i < 4; i++)
             {
                 S[i].P[0].Y = h / 3 * 2 + 100;
@@ -60,11 +61,43 @@ namespace WindowsFormsApp1
             {
                 S[4].P[i] = new Point3D(S[i].P[3].X, S[i].P[3].Y, S[i].P[3].Z);
             }
-            La[0] = new Point3D((S[4].P[1].X + S[4].P[2].X) / 2, S[4].P[2].Y, (S[4].P[1].Z + S[4].P[0].Z) / 2);
-            La[1] = new Point3D(La[0].X, La[0].Y - 40, La[0].Z);
+            La[0] = new Point3D((S[4].P[1].X + S[4].P[2].X) / 2, (-_kol + 5) * 35 + _center.Y, (S[4].P[1].Z + S[4].P[0].Z) / 2);
+            La[1] = new Point3D(La[0].X, La[0].Y - 50, La[0].Z);
 
-            _pl = new double[5][];
-            for (int i = 0; i < 5; i++)
+            S[5].P[0].X = S[4].P[1].X;
+            S[5].P[0].Y = S[4].P[1].Y;
+            S[5].P[0].Z = S[4].P[1].Z;
+            S[5].P[1].X = S[4].P[2].X;
+            S[5].P[1].Y = S[4].P[2].Y;
+            S[5].P[1].Z = S[4].P[2].Z;
+
+            S[6].P[0].X = S[4].P[2].X;
+            S[6].P[0].Y = S[4].P[2].Y;
+            S[6].P[0].Z = S[4].P[2].Z;
+            S[6].P[1].X = S[4].P[3].X;
+            S[6].P[1].Y = S[4].P[3].Y;
+            S[6].P[1].Z = S[4].P[3].Z;
+
+            S[7].P[0].X = S[4].P[3].X;
+            S[7].P[0].Y = S[4].P[3].Y;
+            S[7].P[0].Z = S[4].P[3].Z;
+            S[7].P[1].X = S[4].P[0].X;
+            S[7].P[1].Y = S[4].P[0].Y;
+            S[7].P[1].Z = S[4].P[0].Z;
+
+            for (int i = 4; i < 8; i++)
+            {
+                for (int j = 2; j < 4; j++)
+                {
+                    S[i].P[j].X = _center.X;
+                    S[i].P[j].Y = (( -_kol + 5 ) * 35) +  _center.Y;
+                    S[i].P[j].Z = 0;
+                }
+            }
+
+
+            _pl = new double[8][];
+            for (int i = 0; i < 8; i++)
             {
                 _pl[i] = new double[4];
             }
@@ -92,7 +125,7 @@ namespace WindowsFormsApp1
                 W[3][k].TurnW(new Point3D(0, 180, 0), c);
                 W[0][k] = new Window(p);
                 W[0][k].TurnW(new Point3D(0, 270, 0), c);
-                p.X += 40;
+                p.X += 60;
                 k++;
 
                 W[1][k] = new Window(p);
@@ -102,7 +135,7 @@ namespace WindowsFormsApp1
                 W[3][k].TurnW(new Point3D(0, 180, 0), c);
                 W[0][k] = new Window(p);
                 W[0][k].TurnW(new Point3D(0, 270, 0), c);
-                p.X -= 40;
+                p.X -= 60;
                 p.Y -= 35;
             }
         }
@@ -159,7 +192,7 @@ namespace WindowsFormsApp1
 
         private void TurnHouse(Point3D p, Point3D angle)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 8; i++)
                 for (int j = 0; j < 4; j++)
                 {
                     Transform.TurnY(p, S[i].P[j], angle.Y);
@@ -178,7 +211,7 @@ namespace WindowsFormsApp1
             Transform.TurnX(p, La[1], angle.X);
             Transform.TurnZ(p, La[1], angle.Z);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 8; i++)
             {
                 _pl[i][0] = (S[i].P[1].Y - S[i].P[0].Y) * (S[i].P[2].Z - S[i].P[0].Z) - (S[i].P[2].Y - S[i].P[0].Y) * (S[i].P[1].Z - S[i].P[0].Z);
                 _pl[i][1] = (S[i].P[1].X - S[i].P[0].X) * (S[i].P[2].Z - S[i].P[0].Z) - (S[i].P[2].X - S[i].P[0].X) * (S[i].P[1].Z - S[i].P[0].Z);
@@ -309,9 +342,9 @@ namespace WindowsFormsApp1
             ll.TurnLightning(_center, new Point3D(0, angle.X, angle.Z));
             double kof = (ll.Model[0].Z) / 400 * 0.5 + 1;
             ll.ScaleLightning(_center, kof);
-            var pol = new PointF[5][];
+            var pol = new PointF[8][];
             TurnHouse(_center, new Point3D(-15, angle.Y, angle.Z));
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 8; i++)
             {
                 pol[i] = new PointF[4];
                 for (int j = 0; j < 4; j++)
@@ -320,7 +353,11 @@ namespace WindowsFormsApp1
                     pol[i][j].Y = S[i].P[j].Y;
                 }
             }
-            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x44, 0x1C, 0x18)), pol[4]);
+            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x65, 0x43, 0x21)), pol[4]);
+            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x65, 0x43, 0x21)), pol[5]);
+            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x65, 0x43, 0x21)), pol[6]);
+            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x65, 0x43, 0x21)), pol[7]);
+
             Brush b;
             double yg = angle.X % 360;
             if (yg >= 0 && yg <= 90 || yg <= -270 && yg >= -360)

@@ -94,12 +94,13 @@ namespace WindowsFormsApp1
         public void Timer2()
         {
             var r = new Random();
+
             for (int i = 0; i < 4; i++)
             {
                 int k = r.Next(0, 2 * Kol - 1);
                 _house.W[i][k].Light = Math.Abs(_house.W[i][k].Light - 1);
-                k = r.Next(0, 2 * Kol - 1);
-                _house.W[i][k].Light = Math.Abs(_house.W[i][k].Light - 1);
+                //k = r.Next(0, 2 * Kol - 1);
+                //_house.W[i][k].Light = Math.Abs(_house.W[i][k].Light - 1);
             }
             _flags = false;
             DrawScene();
@@ -161,7 +162,7 @@ namespace WindowsFormsApp1
             {
                 _ya += _yan;
             }
-            if (fy)
+            if (!fy)
             {
                 Init_l();
                 Oldy = -_yan;
@@ -173,6 +174,7 @@ namespace WindowsFormsApp1
 
         public void Trace()
         {
+            int co = 0;
             var r = new RayTracer();
             var model = new List<Point3D>();
             var subModels = new List<Point3D>();
@@ -182,6 +184,7 @@ namespace WindowsFormsApp1
             ll.ScaleLightning(_house.La[1], kof);
             foreach (Point3D t in ll.Model)
             {
+                co++;
                 var ray = new Ray(new Point3D(t.X - _p.X, t.Y - _p.Y, t.Z - _p.Z), new Point3D(_p.X, _p.Y, _p.Z));
                 Trace c = r.Trace(ray, _house, ll);
                 if (c.Dist == 1)
@@ -195,6 +198,7 @@ namespace WindowsFormsApp1
             {
                 foreach (Point3D t1 in t)
                 {
+                    co++;
                     var ray = new Ray(new Point3D(t1.X - _p.X, t1.Y - _p.Y, t1.Z - _p.Z), new Point3D(_p.X, _p.Y, _p.Z));
                     Trace c = r.Trace(ray, _house, ll);
                     if (c.Dist == 1)
@@ -206,6 +210,7 @@ namespace WindowsFormsApp1
             }
             var l = new Lightning(model, subModels);
             DrawLightning(l);
+            System.Console.WriteLine("IN trace {0}", co);
         }
 
         private void Init_l()
@@ -214,9 +219,9 @@ namespace WindowsFormsApp1
                (_light.Model[0].Z + _light.Model[_light.Model.Count - 1].Z) / 2);
         }
 
-        public void Button(bool e)
+        public void Button(int e)
         {
-            if (e)
+            if (e == 1)
             {
                 _yan = 2;
                 _ya += _yan;
@@ -225,7 +230,7 @@ namespace WindowsFormsApp1
                 Transform.TurnY(_center, _l, -_yan);
                 DrawScene();
             }
-            if (!e)
+            if (e == 2)
             {
                 _yan = -2;
                 _ya += _yan;
@@ -239,11 +244,26 @@ namespace WindowsFormsApp1
 
         private void DrawScene()
         {
+            System.Console.WriteLine("DRAW NEW SCENE!!!! {0} ", Kol);
+            Int64 t = DateTime.Now.Ticks;
             DrawEarth();
             DrawShadow();
             DrawSky();
             DrawHouse();
             Trace();
+            Int64 t2 = DateTime.Now.Ticks;
+            int c = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 2 * Kol; j++)
+                {
+                    if (this._house.W[i][j].Light == 1)
+                    {
+                        c++;
+                    }
+                }
+            }
+            System.Console.WriteLine("TIME {0} \t {1} \t {2}", t2 - t, Kol * 8, c);
         }
 
         public void WindowsChange()
@@ -277,6 +297,7 @@ namespace WindowsFormsApp1
         private Lightning _light;
         private Point3D _l;
         private bool[] _sh;
+        public int c_smen_win = 1;
         public int Kol;
     }
 

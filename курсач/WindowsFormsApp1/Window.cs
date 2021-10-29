@@ -13,8 +13,8 @@ namespace WindowsFormsApp1
             Points = new Point3D[4];
 
             Points[0] = new Point3D(p.X, p.Y, p.Z);
-            Points[1] = new Point3D(p.X + 20, p.Y, p.Z);
-            Points[2] = new Point3D(p.X + 20, p.Y - 20, p.Z);
+            Points[1] = new Point3D(p.X + 40, p.Y, p.Z);
+            Points[2] = new Point3D(p.X + 40, p.Y - 20, p.Z);
             Points[3] = new Point3D(p.X, p.Y - 20, p.Z);
 
             var r = new Random();
@@ -37,15 +37,15 @@ namespace WindowsFormsApp1
         {
             if (Light == 1)
             {
-                gr.FillPolygon(new SolidBrush(Color.Black), ToPolygon());
+                gr.FillPolygon(new SolidBrush(Color.Yellow), ToPolygon());
 
                 gr.DrawLine(new Pen(Color.Black),
-                            (Points[0].X + Points[1].X) / 2, (Points[0].Y + Points[1].Y) / 2,
-                            (Points[2].X + Points[3].X) / 2, (Points[2].Y + Points[3].Y) / 2);
+                            (Points[0].X + Points[1].X) / 2 - 6, (Points[0].Y + Points[1].Y) / 2,
+                            (Points[2].X + Points[3].X) / 2 - 6, (Points[2].Y + Points[3].Y) / 2);
 
                 gr.DrawLine(new Pen(Color.Black),
-                            (Points[0].X + Points[3].X) / 2, (Points[0].Y + Points[3].Y) / 2,
-                            (Points[2].X + Points[1].X) / 2, (Points[2].Y + Points[1].Y) / 2);
+                            (Points[0].X + Points[1].X) / 2 + 6, (Points[0].Y + Points[1].Y) / 2,
+                            (Points[2].X + Points[3].X) / 2 + 6, (Points[2].Y + Points[3].Y) / 2);
 
 
             }
@@ -68,11 +68,11 @@ namespace WindowsFormsApp1
                     else
                     {
                         var hl = new Highlight(lgh, this, w, h);
-
+ 
                         gr.DrawLine(new Pen(Color.White),
                                     hl.Edge[0].PointF,
                                     hl.Edge[1].PointF);
-
+ 
                         Lightning.Draworeol(hl.Edge[0].PointF,
                                             hl.Edge[1].PointF, gr);
                     }

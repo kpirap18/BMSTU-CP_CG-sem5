@@ -2,198 +2,192 @@
 
 В данном разделе представленны средства разработки программного обеспечения, детали реализации и тестирование функций.
 
-\section{Средства реализации}
+\section{Выбор языка программирования и среды разработки}
+Существует множество языков, а также сред программирования, многие из которых обладают достаточно высокой эффективностью, удобством и простотой в использовании. Для разработки данной программы был выбран язык C\#. Данный выбор обусловлен следующими факторами.
 
-В качестве языка программирования, на котором будет реализовано программное обеспечение, выбран язык программирования JavaScript \cite{js}. Выбор языка обусловлен тем, что для этого языка существует библиотека QCEngine \cite{qcengine}, предоставляющая полный функционал который нужен для реализации выбранного мною алгоритма. В качестве программной платформы, с помощью которого можно превратить JavaScript из узкоспециализированного языка (работающего только в браузере) в язык общего назначения, был выбран Node.js \cite{nodejs}.
+\begin{enumerate}
+	\item Этот язык предоставляет программисту широкие возможности реализации самых разнообразных алгоритмов. Он обладает высокой эффективностью и большим набором стандартных классов и процедур.
+	\item C\# является полностью объектно-ориентированным. Он позволяет использовать множественное наследование, абстрактные и параметризованные классы.
+	\item Язык является строго типизированным, что позволяет защититься от непроконтролированных ошибок.
+	\item В данном языке имеется большое количество библиотек и шаблонов, позволяющих не тратить время на изобретение готовых конструкций.
+\end{enumerate}
 
-Для создания пользовательского интерфейса программного обеспечения будет использоваться модуль node-gtk \cite{node-gtk} вместе с модулем canvas \cite{node-canvas}. Два этих инструмента в связке друг с другом позволят одновременно выводить синтезируемое изображение на экран, и сохранять его (при необходимости) в файл, например для дальнейшего анализа с помощью каких-либо других утилит.
+В качестве среды разработки была выбрана Visual Studio 2019. Некоторые факторы по которым была выбрана данная среда.
+\begin{enumerate}
+	\item Включает весь основной функционал: параллельная сборка, отладчик, поддержка точек останова, сборки и т.д.
+	\item Разработчики имеют возможность расширить любой функционал, включая компиляцию, отладку.
+	\item Работает с интерфейсом Windows Forms, который очень удобен в использовании, а также позволяет без проблем создавать приложения.
+\end{enumerate}
 
-Для тестирования программного обеспечения будет использоваться фреймворк Jest \cite{jest}. Данный инструмент предоставляет много различного функционала, позволяющего тестировать приложения, в том числе написанных на Node.js. Разрабатываемое программное обеспечение будет тестироваться по средствам модульного тестирования \cite{utests}. Функциональное тестирование \cite{ftests} ПО проводиться не будет из-за своей специфики -- разработанное ПО является GUI-приложением, что усложняет процесс тестирования.
+\section{Структура программы}
+Так как при написании программы используется язык C\#, а это объектно-ориентированный язык, то особое внимание уделено структуре классов.
 
-Для обеспечения качества кода был использован инструмент ESLint \cite{eslint}, позволяющий во время процесса написания исходных кодов программного обеспечения контролировать наличие синтаксических и логических ошибок.
+Условно классы в программе можно разделить на несколько групп по выполняемым функциям.
 
-В качестве среды разработки выбран текстовый редактор Visual Studio Code \cite{vscode}, содержащий большим количеством плагинов и инструментов для различных языков программирования, в том числе JavaScript. Такие инструменты облегчают и ускоряют процесс разработки программного обеспечения \cite{why-ide}.
+\begin{itemize}
+	\item Математические абстракции
+	\begin{itemize}
+		\item Trace - структура, в которую входит точка пересечения луча с объектом расстояние от камеры до точки пересечения
+		\item Ray - трехмерный луч, задающийся точкой начала луча, направляющим вектором
+		\item Comparator - помогает сравнивать сегменты молнии
+	\end{itemize}
+	\item Вспомогательные классы свойств трехмерных объектов
+	\begin{itemize}
+		\item Texture - абстрактный класс с основными свойствами.
+		\item SimpleTexture и VectorTexture - обеспечивают загрузку из файла текстуры, ее интерпретацию на простую поверхность
+	\end{itemize}
+	\item Трехмерные объекты
+	\begin{itemize}
+		\item House – реализует работу с домом, генерацию, трехмерные преобразования
+		\item Lightning – реализует работу с молнией, генерацию, трёхмерные преобразования.
+	\end{itemize}
+	\item Источники света
+	\begin{itemize}
+		\item Shadow - класс, позволяющий работать с тенями. Одним из ключевых механизмов базового алгоритма тарссировки лучей является метод теневых лучей, позволяющие реализовать тени от загораживающих источники света объектов.
+	\end{itemize}
+	\item Сцена
+	\begin{itemize}
+		\item Scene - характеризует набор объектов и их свойств. Следует обратить внимание на то, что сцена использует динамические объекты, что позволяет уже после загрузки и построения сцены изменить ее состав (удалять/добавлять/изменять компоненты).
+	\end{itemize}
+	\item Алгоритмы визуализации
+	\begin{itemize}
+		\item Highlight - отрисовка вспышки
+		\item Lightning - отрисовка молнии
+		\item House - отрисовка дома
+		\item Shadow - отрисовка тени
+		\item Texture - отрисовка текстуры
+		\item Window - отрисовка окна
+	\end{itemize}
+	\item Интерфейс пользователя
+	\begin{itemize}
+		\item Взаимодействие с интерфейсом происходит через диалоговые окна, которые в свою очередь взаимодействуют с классом Scene
+	\end{itemize}	
+\end{itemize}
 
-\section{Детали реализации}
+На рисунке \ref{img:shema} представлена структура и состав классов.
 
-В листингах \ref{qtable} -- \ref{qmap} приведен исходный код реализации алгоритма квантовой супер выборки. Сам алгоритм разделен на подпрограммы: формирование квантовой поисковой таблицы, синтез изображения и заполнения карты достоверности. 
+\img{120mm}{shema}{Структура и состав классов}
+\clearpage
 
-\begin{lstlisting}[label=qtable,caption=Функция формирования квантовой поисковой таблицы, language=javascript]
-function create_qss_lookup_table()
+\section{Разработка алгоритмов}
+На листинге \ref{lst:raytrac} представлен алгоритм обратной трассировки лучей (улучшенный по времени).
+
+
+\begin{lstlisting}[label=lst:raytrac,caption=Функция заполнения карты достоверности, language=c]
+static public List<PointF> Reflection(Window w, double[] nor, Point3D p, Lightning lightning)
 {
-	qc.reset((Constants.res_aa_bits + Constants.res_aa_bits) + Constants.num_counter_bits);
-	var qxy = qc.new_qint(Constants.res_aa_bits + Constants.res_aa_bits, 'qxy');
-	var qcount = qc.new_qint(Constants.num_counter_bits, 'count');
+	var po = new Point3D(p.X, p.Y, -200);
+	var no = new double[4];
+	var refl = new List<PointF>();
+	double r;
 	
-	var num_subpixels = 1 << (Constants.res_aa_bits + Constants.res_aa_bits)
-	qss_full_lookup_table = null;
+	float dx = w.Points[0].X - w.Points[3].X;
+	float dy = w.Points[0].Y - w.Points[3].Y;
+	float dz = w.Points[0].Z - w.Points[3].Z;
 	
-	for (var hits = 0; hits <= num_subpixels; ++hits)
+	float dx2 = w.Points[0].X - w.Points[1].X;
+	float dy2 = w.Points[0].Y - w.Points[1].Y;
+	float dz2 = w.Points[0].Z - w.Points[1].Z;
+	
+	double step = 1.0 / Math.Sqrt(dx * dx + dy * dy + dz * dz);
+	
+	nor.CopyTo(no, 0);
+	for (int i = 0; i < 4; i++)
 	{
-		create_table_column(hits, qxy, qcount);
+		no[i] /= 100000;
 	}
 	
-	var cw = qss_full_lookup_table;
-	qss_count_to_hits = [];
-	
-	for (var count = 0; count < cw.length; ++count)
+	for (r = 0.0; r <= 1; r = r + step)
 	{
-		var best_hits = 0;
-		var best_prob = 0;
-	
-		for (var hits = 0; hits < cw[0].length; ++hits)
-		{
-			if (best_prob < cw[count][hits])
-			{
-				best_prob = cw[count][hits];
-				best_hits = hits;
-			}
-		}
-	
-		qss_count_to_hits.push(best_hits);
-	}
-	
-	if (qss_full_lookup_table && images.display_cwtable)
-	{
-		images.display_cwtable.setup(cw[0].length, cw.length, 16);
+		var x = (float)(w.Points[3].X + r * dx + 0.5);
+		var y = (float)(w.Points[3].Y + r * dy + 0.5);
+		var z = (float)(w.Points[3].Z + r * dz + 0.5);
+		float x2 = x + dx2;
+		float y2 = y + dy2;
+		float z2 = z + dz2;
 		
-		for (var y = 0; y < cw.length; ++y)
+		float dx3 = x2 - x;
+		float dy3 = y2 - y;
+		float dz3 = z2 - z;
+		
+		double step2 = 1.0 / Math.Sqrt(dx3 * dx3 + dy3 * dy3 + dz3 * dz3);
+		double r2;
+		
+		for (r2 = 0.0; r2 <= 1; r2 = r2 + step2)
 		{
-			for (var x = 0; x < cw[0].length; ++x)
-			{
-				images.display_cwtable.pixel(x, y, cw[y][x]);
-			}
-		}
-	}
-}
-
-
-function create_table_column(color, qxy, qcount)
-{
-	var num_subpixels = 1 << (Constants.res_aa_bits + Constants.res_aa_bits)
-	var true_count = color;
-	
-	qc.write(0);
-	qcount.hadamard();
-	qxy.hadamard();
-	
-	for (var i = 0; i < Constants.num_counter_bits; ++i)
-	{
-		var reps = 1 << i;
-		var condition = qcount.bits(reps);
-		var mask_with_condition = qxy.bits().or(condition);
-	
-		for (var j = 0; j < reps; ++j)
-		{
-			flip_n_terms(qxy, true_count, condition);
-			grover_iteration(qxy.bits(), mask_with_condition);
-		}
-	}
-	
-	invQFT(qcount);
-	var table = [];
-	
-	for (var i = 0; i < (1 << Constants.num_counter_bits); ++i)
-	{
-		table.push(qcount.peekProbability(i));
-	}
-	
-	if (qss_full_lookup_table == null)
-	{
-		qss_full_lookup_table = [];
-	
-		for (var i = 0; i < (1 << Constants.num_counter_bits); ++i)
-		{
-			qss_full_lookup_table.push([]);
+			var x3 = (float)(x - r2 * dx3 + 0.5);
+			var y3 = (float)(y - r2 * dy3 + 0.5);
+			var z3 = (float)(z - r2 * dz3 + 0.5);
 			
-			for (var j = 0; j < num_subpixels; ++j)
+			var poi = new Point3D(x3 - po.X, y3 - po.Y, z3 - po.Z);
+			double a = Math.Abs(no[0] * poi.X + no[1] * poi.Y + no[2] * poi.Z) /
+				Math.Sqrt(no[0] * no[0] + no[1] * no[1] + no[2] * no[2]) /
+				Math.Sqrt(poi.X * poi.X + poi.Y * poi.Y + poi.Z * poi.Z);
+			
+			a = Math.Asin(a);
+			
+			var os = new Point3D((float)(poi.Y * no[2] - poi.Z * no[1]),
+				(float)(no[0] * poi.Z - poi.X * no[2]),
+				(float)(poi.X * no[1] - poi.Y * no[0]));
+			
+			var vector = new Point3D();
+			
+			double cos = Math.Cos(a), sin = Math.Sin(a);
+			
+			vector.X = (float)(no[0] * (cos + (1 - cos) * os.X * os.X) + 
+				no[1] * ((1 - cos) * os.Y * os.X + sin * os.Z) +
+				no[2] * ((1 - cos) * os.Z * os.X - sin * os.Y));
+			vector.Y = (float)(no[0] * (-sin * os.Z + (1 - cos) * os.X * os.Y) + 
+				no[1] * ((1 - cos) * os.Y * os.Y + cos) +
+				no[2] * ((1 - cos) * os.Z * os.Y + sin * os.X));
+			vector.Z = (float)(no[0] * (sin * os.Y + (1 - cos) * os.X * os.Z) + 
+				no[1] * ((1 - cos) * os.Y * os.Z - sin * os.X) +
+				no[2] * ((1 - cos) * os.Z * os.Z + cos));
+			
+			var ray = new Ray(vector, new Point3D(x3, y3, z3));
+			Trace t2 = lightning.TraceM(ray);
+			
+			if (t2.Dist != -1)
 			{
-				qss_full_lookup_table[i].push(0);
+				refl.Add(new PointF(x3, y3));
 			}
 		}
 	}
 	
-	for (var col = 0; col < 1 << Constants.num_counter_bits; ++col)
-	{
-		qss_full_lookup_table[col][true_count] = table[col];
-	}
+	return refl;
 }
 \end{lstlisting}
 
-\begin{lstlisting}[label=qss,caption=Функция синтеза изображения на основе значений поисковой таблицы, language=javascript]
-function do_qss_image()
-{
-	qc.reset(2 * Constants.res_aa_bits + Constants.num_counter_bits + Constants.accum_bits);
-	var sp = {};
-	
-	sp.qx = qc.new_qint(Constants.res_aa_bits, 'qx');
-	sp.qy = qc.new_qint(Constants.res_aa_bits, 'qy');
-	sp.counter = qc.new_qint(Constants.num_counter_bits, 'counter');
-	sp.qacc = qc.new_qint(Constants.accum_bits, 'scratch');
-	sp.qacc.write(0);
-	
-	var total_pixel_error = 0;
-	var num_zero_error_pixels = 0;
-	qss_raw_result = [];
-	
-	for (sp.ty = 0; sp.ty < Constants.res_tiles; ++sp.ty)
-	{
-		qss_raw_result.push([]);
-		
-		Constants.update_fraction();
-		
-		for (sp.tx = 0; sp.tx < Constants.res_tiles; ++sp.tx)
-		{
-			qss_tile(sp);
-			qss_raw_result[sp.ty].push(sp.readVal);
-			images.display_qss.pixel(sp.tx, sp.ty, sp.color);
-			
-			if (ideal_result)
-			{
-				var pixel_error = Math.abs(sp.hits - ideal_result[sp.ty][sp.tx]);
-			
-				if (pixel_error)
-				{
-					total_pixel_error += pixel_error;
-				}
-				else
-				{
-					num_zero_error_pixels++;
-				}
-			}
-		}
-	}
-}
-\end{lstlisting}
 
-\begin{lstlisting}[label=qmap,caption=Функция заполнения карты достоверности, language=javascript]
-function draw_confidence_map()
-{
-	var cw = qss_full_lookup_table;
-	for (var ty = 0; ty < Constants.res_tiles; ++ty)
-	{
-		for (var tx = 0; tx < Constants.res_tiles; ++tx)
-		{
-			var qss_out = qss_raw_result[ty][tx];
-			var row_total = 0;
-			var row_max = 0;
-		
-			for (var x = 0; x < cw[0].length; ++x)
-			{
-				row_total += cw[qss_out][x];
-					
-				if (cw[qss_out][x] > row_max)
-				{
-					row_max = cw[qss_out][x];
-				}
-			}
-	
-			images.display_confidence.pixel(tx, ty, row_max / row_total);
-		}
-	}
-}
-\end{lstlisting}
+\section{Интерфейс}
+На рисунке \ref{img:inter} представлен интерфейс программы.
 
-\section*{Вывод}
+\img{8mm}{inter}{Интерфей программы}
 
-В данном разделе были рассмотренны средства реализации программного обеспечения и листинги исходных кодов программного обеспечения, разработанного на основе алгоритма, изложенного в конструкторской части.
+Функции представленных кнопок следующие:
+\begin{itemize}
+	\item кнопка "Запустить/Оставновить" - запускает или выключает (останавливает) автоматичускую генерацию молнии, непрерывно генерируются различные изображения;
+	\item кнопка "Визуализация" - создает одно изображение с указанной частотой включения и выключения света в окнах;
+	\item кнопка "Включить свет" - включает свет во всех окнах;
+	\item кнопка "Выключить свет" - выключает свет во всех окнах;
+	\item кнопка "Изменить количество этажей" - изменяет высоту дома (количество этажей), значение берется из поля слева, при этом генерируется новая сцена.
+\end{itemize}
+
+Также пользователь может взаимодействовать с программой при помощи стрелок вправо/влево на клавиатуре или при помощи указателя мышки. Таким образом будет производиться поворот сцены.
+
+\section{Тестирование}
+
+На рисунке \ref{img:inter} представлен интерфейс данном программы, на котором видно, что есть два поля ввода информации, а именно информации про количество этажей и частоту смены света. 
+
+В каждом поле стоит ограничение на ввод информации, а именно ввести можно только цифры от 1 до 9 (для лучшей отрисовки сцены).
+
+Частоту смены света можно задать в диапазоне от 1 до 5000, где 1 -- очень частая смена света, и 5000 -- редкая.
+
+На рисунке \ref{img:test} представлен результат для входных данных: 3- количество этажей, 5000 - частота смена света (работу данного параметра можно посмотреть только при непосредсвенной непрерывной генерации сцены).
+
+\img{70mm}{test}{Пример работы программы}
+
+
+\section{Вывод}
+
+В данном разделе были рассмотренны средства реализации программного обеспечения и листинги исходных кодов программного обеспечения, разработанного на основе алгоритма трассировки лучей, изложенного в конструкторской части.

@@ -236,7 +236,7 @@ namespace WindowsFormsApp1
         static public void Draworeol(PointF p1, PointF p2, Graphics gr)
         {
 
-            Color c = Color.FromArgb(160, Color.White);
+            Color c = Color.FromArgb(160, Color.Azure);
             for (int i = 0; i < 10; i++)
             {
                 c = Color.FromArgb(c.A * (9 - i) / 10, c);
@@ -251,7 +251,7 @@ namespace WindowsFormsApp1
             const int compar = 20;
             var bmp = new Bitmap(picBox.Image);
             Graphics gr = Graphics.FromImage(bmp);
-            Color c1 = Color.FromArgb(255, Color.White);
+            Color c1 = Color.FromArgb(255, Color.Azure);
             var pen = new Pen(c1);
 
             for (int i = 1; i < Model.Count; i++)
@@ -305,11 +305,11 @@ namespace WindowsFormsApp1
         public void DrawArea(Graphics gr, Point3D p)
         {
             var path = new GraphicsPath();
-            path.AddEllipse(p.X - 200, p.Y - 100, 400, 200);
-            var pthGrBrush = new PathGradientBrush(path) { CenterColor = Color.FromArgb(170, Color.White) };
-            Color[] colors = { Color.FromArgb(0, Color.White) };
+            path.AddEllipse(p.X - 400, p.Y - 300, 800, 600);
+            var pthGrBrush = new PathGradientBrush(path) { CenterColor = Color.FromArgb(170, Color.Azure) };
+            Color[] colors = { Color.FromArgb(0, Color.Azure) };
             pthGrBrush.SurroundColors = colors;
-            gr.FillEllipse(pthGrBrush, p.X - 200, p.Y - 100, 400, 200);
+            gr.FillEllipse(pthGrBrush, p.X - 400, p.Y - 300, 800, 600);
         }
     }
 }

@@ -61,6 +61,7 @@ namespace WindowsFormsApp1
 
         static public List<PointF> Reflection(Window w, double[] nor, Point3D p, Lightning lightning)
         {
+            int count_ray = 0;
             var po = new Point3D(p.X, p.Y, -200);
             var no = new double[4];
             var refl = new List<PointF>();
@@ -119,13 +120,17 @@ namespace WindowsFormsApp1
 
                     double cos = Math.Cos(a), sin = Math.Sin(a);
 
-                    vector.X = (float)(no[0] * (cos + (1 - cos) * os.X * os.X) + no[1] * ((1 - cos) * os.Y * os.X + sin * os.Z) +
-                                        no[2] * ((1 - cos) * os.Z * os.X - sin * os.Y));
-                    vector.Y = (float)(no[0] * (-sin * os.Z + (1 - cos) * os.X * os.Y) + no[1] * ((1 - cos) * os.Y * os.Y + cos) +
-                                        no[2] * ((1 - cos) * os.Z * os.Y + sin * os.X));
-                    vector.Z = (float)(no[0] * (sin * os.Y + (1 - cos) * os.X * os.Z) + no[1] * ((1 - cos) * os.Y * os.Z - sin * os.X) +
-                                 no[2] * ((1 - cos) * os.Z * os.Z + cos));
+                    vector.X = (float)(no[0] * (cos + (1 - cos) * os.X * os.X) + 
+                        no[1] * ((1 - cos) * os.Y * os.X + sin * os.Z) +
+                        no[2] * ((1 - cos) * os.Z * os.X - sin * os.Y));
+                    vector.Y = (float)(no[0] * (-sin * os.Z + (1 - cos) * os.X * os.Y) + 
+                        no[1] * ((1 - cos) * os.Y * os.Y + cos) +
+                        no[2] * ((1 - cos) * os.Z * os.Y + sin * os.X));
+                    vector.Z = (float)(no[0] * (sin * os.Y + (1 - cos) * os.X * os.Z) + 
+                        no[1] * ((1 - cos) * os.Y * os.Z - sin * os.X) +
+                        no[2] * ((1 - cos) * os.Z * os.Z + cos));
 
+                    count_ray++;
                     var ray = new Ray(vector, new Point3D(x3, y3, z3));
                     Trace t2 = lightning.TraceM(ray);
 
@@ -136,6 +141,7 @@ namespace WindowsFormsApp1
                 }
             }
 
+            System.Console.WriteLine("ray_trace = {0}", count_ray);
             return refl;
         }
     }

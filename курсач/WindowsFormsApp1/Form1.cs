@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
         {
             _scene.Xd = e.X;
             _scene.Flag = true;
+            _scene.Button(1);
         }
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -40,6 +41,7 @@ namespace WindowsFormsApp1
             {
                 _scene.Move(new Point(e.X, e.Y));
             }
+            _scene.Button(1);
         }
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
@@ -47,17 +49,18 @@ namespace WindowsFormsApp1
         }
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            this.timer2.Interval = int.Parse(toolStripTextBox2.Text);
             _scene.Click();            
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Right)
             {
-                _scene.Button(true);
+                _scene.Button(1);
             }
             if (e.KeyCode == Keys.Left)
             {
-                _scene.Button(false);
+                _scene.Button(2);
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
@@ -88,6 +91,21 @@ namespace WindowsFormsApp1
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
 
         }
