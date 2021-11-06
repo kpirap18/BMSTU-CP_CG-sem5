@@ -11,6 +11,7 @@ namespace WindowsFormsApp1
 {
     class Lightning
     {
+        public int turn_off_w = 0;
         public readonly List<Point3D> Model;
         public readonly List<List<Point3D>> SubModels;
 

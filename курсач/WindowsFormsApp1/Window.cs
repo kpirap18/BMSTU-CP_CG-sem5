@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
             Points[2] = new Point3D(p.X + 40, p.Y - 20, p.Z);
             Points[3] = new Point3D(p.X, p.Y - 20, p.Z);
 
+           // System.Console.WriteLine("{0}, {1}, {2}, {3}", p.X, p.X + 40, p.Y, p.Y - 20);
+
             var r = new Random();
             Light = r.Next(0, 2);
         }
@@ -57,6 +59,7 @@ namespace WindowsFormsApp1
                 {
                     if (f)
                     {
+                        lgh.turn_off_w++;
                         var points = RayTracer.Reflection(this, no, p, lgh);
 
                         if (points.Count > 1)

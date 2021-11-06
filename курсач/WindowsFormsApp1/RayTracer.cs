@@ -78,10 +78,7 @@ namespace WindowsFormsApp1
             double step = 1.0 / Math.Sqrt(dx * dx + dy * dy + dz * dz);
 
             nor.CopyTo(no, 0);
-            for (int i = 0; i < 4; i++)
-            {
-                no[i] /= 100000;
-            }
+
 
             for (r = 0.0; r <= 1; r = r + step)
             {
@@ -106,6 +103,7 @@ namespace WindowsFormsApp1
                     var z3 = (float)(z - r2 * dz3 + 0.5);
 
                     var poi = new Point3D(x3 - po.X, y3 - po.Y, z3 - po.Z);
+
                     double a = Math.Abs(no[0] * poi.X + no[1] * poi.Y + no[2] * poi.Z) /
                                Math.Sqrt(no[0] * no[0] + no[1] * no[1] + no[2] * no[2]) /
                                Math.Sqrt(poi.X * poi.X + poi.Y * poi.Y + poi.Z * poi.Z);
@@ -115,7 +113,7 @@ namespace WindowsFormsApp1
                     var os = new Point3D((float)(poi.Y * no[2] - poi.Z * no[1]),
                                          (float)(no[0] * poi.Z - poi.X * no[2]),
                                          (float)(poi.X * no[1] - poi.Y * no[0]));
-
+                   
                     var vector = new Point3D();
 
                     double cos = Math.Cos(a), sin = Math.Sin(a);
@@ -129,7 +127,7 @@ namespace WindowsFormsApp1
                     vector.Z = (float)(no[0] * (sin * os.Y + (1 - cos) * os.X * os.Z) + 
                         no[1] * ((1 - cos) * os.Y * os.Z - sin * os.X) +
                         no[2] * ((1 - cos) * os.Z * os.Z + cos));
-
+                    
                     count_ray++;
                     var ray = new Ray(vector, new Point3D(x3, y3, z3));
                     Trace t2 = lightning.TraceM(ray);

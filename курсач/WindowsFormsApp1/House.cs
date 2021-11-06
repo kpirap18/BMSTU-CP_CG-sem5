@@ -433,6 +433,8 @@ namespace WindowsFormsApp1
 
             pictureBox1.Image = bmp;
             TurnHouse(_center, new Point3D(15, 0, 0));
+            System.Console.WriteLine("{0} - turn off w", ll.turn_off_w);
+            ll.turn_off_w = 0;
         }
 
         public readonly Side[] S;

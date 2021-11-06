@@ -210,7 +210,7 @@ namespace WindowsFormsApp1
             }
             var l = new Lightning(model, subModels);
             DrawLightning(l);
-            System.Console.WriteLine("IN trace {0}", co);
+            //System.Console.WriteLine("IN trace {0}", co);
         }
 
         private void Init_l()
@@ -257,7 +257,7 @@ namespace WindowsFormsApp1
             {
                 for (int j = 0; j < 2 * Kol; j++)
                 {
-                    if (this._house.W[i][j].Light == 1)
+                    if (this._house.W[i][j].Light == 0)
                     {
                         c++;
                     }
@@ -297,7 +297,6 @@ namespace WindowsFormsApp1
         private Lightning _light;
         private Point3D _l;
         private bool[] _sh;
-        public int c_smen_win = 1;
         public int Kol;
     }
 

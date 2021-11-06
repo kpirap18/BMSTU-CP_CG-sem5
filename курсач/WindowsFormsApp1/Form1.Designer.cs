@@ -258,14 +258,14 @@
             this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.MaxLength = 111;
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(50, 26);
-            this.toolStripTextBox2.Text = "4000";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox2.Text = "10000";
             this.toolStripTextBox2.Click += new System.EventHandler(this.toolStripTextBox2_Click);
             // 
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
+            this.timer2.Interval = 100000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1

@@ -17,16 +17,11 @@ Reallocated glb_str_ptr (elt_size=4) to 10 items from 0.
 Reallocated global_strs (elt_size=200001) to 10 items from 0.
 Reallocated glb_str_end (elt_size=4) to 10 items from 0.
 Database file #1: 51-biblio.bib
-Repeated entry---line 124 of file 51-biblio.bib
- : @misc{PQC-prcnt
- :                ,
-I'm skipping whatever remains of this entry
 
 Here's how much of BibTeX's memory you used:
- Cites:                41 out of 750
- Fields:             1202 out of 5000
- Hash table:       199749 out of 200000
- Strings:             796 out of 200000
- Free string pool:  12031 out of 65000
+ Cites:                11 out of 750
+ Fields:              302 out of 5000
+ Hash table:       199772 out of 200000
+ Strings:             702 out of 200000
+ Free string pool:   7387 out of 65000
  Wizard functions:   2958 out of 3000
-(There was 1 error message)
