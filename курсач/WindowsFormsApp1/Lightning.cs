@@ -24,7 +24,8 @@ namespace WindowsFormsApp1
             float x = r.Next(0, w);
             float y = 0;
             float z = r.Next(-100, 100);
-            float xk = r.Next(0, w), yk = r.Next((h / 8 * 7), h), zk = r.Next(-100, 100);
+            float xk = r.Next(-100, w + 100), yk = r.Next(h / 8 * 7, h / 3 * 4), zk = r.Next(0, 3);
+
             Model = new List<Point3D>();
             SubModels = new List<List<Point3D>>();
             Model.Add(new Point3D(x, y, z));
@@ -96,7 +97,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < rm.Count; i++)
             {
                 SubModels.Add(new List<Point3D>());
-                float sublength = r.Next((int)length / 4 * (int)(h - subl[i].Y) / h, (int)length / 4 * 2 * (int)(h - subl[i].Y) / h);
+                float sublength = r.Next((int)length / 4 * (int)(h - subl[i].Y) / h / 6, (int)length / 4 * 5 * (int)(h - subl[i].Y) / h);
                 float l = 0;
                 x = subl[i].X;
                 y = subl[i].Y;

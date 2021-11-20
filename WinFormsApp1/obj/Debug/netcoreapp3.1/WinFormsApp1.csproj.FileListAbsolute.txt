@@ -1,6 +1,0 @@
-C:\Users\kiv09\Documents\cg_cp\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.AssemblyReference.cache
-C:\Users\kiv09\Documents\cg_cp\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp.Form1.resources
-C:\Users\kiv09\Documents\cg_cp\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.GenerateResource.cache
-C:\Users\kiv09\Documents\cg_cp\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.AssemblyInfoInputs.cache
-C:\Users\kiv09\Documents\cg_cp\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.AssemblyInfo.cs
-C:\Users\kiv09\Documents\cg_cp\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.CoreCompileInputs.cache
