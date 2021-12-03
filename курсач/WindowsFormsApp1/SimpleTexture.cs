@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
             switch (Tt)
             {
                 case TextureType.Sky:
-                    Tb = new TextureBrush(Image.FromFile("C:/Users/kiv09/Documents/sem5/cg_cp/курсач/WindowsFormsApp1/22_1.jpg"));
+                    Tb = new TextureBrush(Image.FromFile("C:/Users/kiv09/Documents/sem5/cg_cp/курсач/WindowsFormsApp1/22_3.jpeg"));
                     Tb.ScaleTransform(0.7F, 0.7F);
                     break;
                 case TextureType.Ground:

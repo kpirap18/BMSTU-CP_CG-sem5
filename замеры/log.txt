@@ -1,0 +1,459 @@
+
+
+
+
+1 этаж 1660
+DRAW NEW SCENE!!!! 1 
+0 - turn off w
+TIME 1148634 	 8 	 0
+DRAW NEW SCENE!!!! 1 
+0 - turn off w
+TIME 1174891 	 8 	 0
+DRAW NEW SCENE!!!! 1 
+ray_trace = 840
+ray_trace = 820
+2 - turn off w
+TIME 1181080 	 8 	 8
+DRAW NEW SCENE!!!! 1 
+0 - turn off w
+TIME 1214616 	 8 	 0
+DRAW NEW SCENE!!!! 1 
+ray_trace = 840
+ray_trace = 820
+2 - turn off w
+TIME 1201189 	 8 	 8
+
+
+
+
+2 этажа 3243
+DRAW NEW SCENE!!!! 2 
+0 - turn off w
+TIME 1213490 	 16 	 0
+DRAW NEW SCENE!!!! 2 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+4 - turn off w
+TIME 1265049 	 16 	 16
+DRAW NEW SCENE!!!! 2 
+0 - turn off w
+TIME 1208376 	 16 	 0
+DRAW NEW SCENE!!!! 2 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+4 - turn off w
+TIME 1225706 	 16 	 16
+DRAW NEW SCENE!!!! 2 
+0 - turn off w
+TIME 1140400 	 16 	 0
+DRAW NEW SCENE!!!! 2 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+4 - turn off w
+TIME 1156509 	 16 	 16
+
+
+3 этажа 4863
+DRAW NEW SCENE!!!! 3 
+0 - turn off w
+TIME 1292382 	 24 	 0
+DRAW NEW SCENE!!!! 3 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+6 - turn off w
+TIME 1281861 	 24 	 24
+DRAW NEW SCENE!!!! 3 
+0 - turn off w
+TIME 1131666 	 24 	 0
+DRAW NEW SCENE!!!! 3 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+6 - turn off w
+TIME 1213581 	 24 	 24
+
+
+4 этажа 6472
+DRAW NEW SCENE!!!! 4 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+8 - turn off w
+TIME 1241637 	 32 	 32
+DRAW NEW SCENE!!!! 4 
+0 - turn off w
+TIME 1183469 	 32 	 0
+DRAW NEW SCENE!!!! 4 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+8 - turn off w
+TIME 1168073 	 32 	 32
+DRAW NEW SCENE!!!! 4 
+0 - turn off w
+TIME 1289763 	 32 	 0
+DRAW NEW SCENE!!!! 4 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+8 - turn off w
+TIME 1219845 	 32 	 32
+DRAW NEW SCENE!!!! 4 
+0 - turn off w
+TIME 1183651 	 32 	 0
+
+
+
+5 этажей 8085
+DRAW NEW SCENE!!!! 5 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+10 - turn off w
+TIME 1531499 	 40 	 40
+DRAW NEW SCENE!!!! 5 
+0 - turn off w
+TIME 1474010 	 40 	 0
+DRAW NEW SCENE!!!! 5 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+10 - turn off w
+TIME 1356955 	 40 	 40
+DRAW NEW SCENE!!!! 5 
+0 - turn off w
+TIME 1173836 	 40 	 0
+
+
+
+6 этажей 9705
+DRAW NEW SCENE!!!! 6 
+0 - turn off w
+TIME 1194965 	 48 	 0
+DRAW NEW SCENE!!!! 6 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+12 - turn off w
+TIME 1333155 	 48 	 48
+DRAW NEW SCENE!!!! 6 
+0 - turn off w
+TIME 1233392 	 48 	 0
+DRAW NEW SCENE!!!! 6 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+12 - turn off w
+TIME 1350527 	 48 	 48
+
+
+
+7 этажа  11364
+DRAW NEW SCENE!!!! 7 
+0 - turn off w
+TIME 1325972 	 56 	 0
+DRAW NEW SCENE!!!! 7 
+0 - turn off w
+TIME 1369702 	 56 	 0
+DRAW NEW SCENE!!!! 7 
+0 - turn off w
+TIME 1868548 	 56 	 0
+DRAW NEW SCENE!!!! 7 
+ray_trace = 840
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+14 - turn off w
+TIME 1766177 	 56 	 56
+DRAW NEW SCENE!!!! 7 
+0 - turn off w
+TIME 1384656 	 56 	 0
+DRAW NEW SCENE!!!! 7 
+ray_trace = 840
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 861
+14 - turn off w
+TIME 1759598 	 56 	 56
+DRAW NEW SCENE!!!! 7 
+0 - turn off w
+TIME 1371812 	 56 	 0
+
+
+8 этажа 12984
+DRAW NEW SCENE!!!! 8 
+0 - turn off w
+TIME 1260547 	 64 	 0
+DRAW NEW SCENE!!!! 8 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 816
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+16 - turn off w
+TIME 1731519 	 64 	 64
+DRAW NEW SCENE!!!! 8 
+0 - turn off w
+TIME 1335602 	 64 	 0
+DRAW NEW SCENE!!!! 8 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 816
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+16 - turn off w
+TIME 1686759 	 64 	 64
+
+
+9 этажей 14664
+DRAW NEW SCENE!!!! 9 
+0 - turn off w
+TIME 1334409 	 72 	 0
+DRAW NEW SCENE!!!! 9 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 816
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 840
+ray_trace = 840
+18 - turn off w
+TIME 1710840 	 72 	 72
+DRAW NEW SCENE!!!! 9 
+0 - turn off w
+TIME 1261557 	 72 	 0
+DRAW NEW SCENE!!!! 9 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 816
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 840
+ray_trace = 840
+18 - turn off w
+TIME 1679030 	 72 	 72
+DRAW NEW SCENE!!!! 9 
+0 - turn off w
+TIME 1320117 	 72 	 0
+DRAW NEW SCENE!!!! 9 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 816
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 840
+ray_trace = 861
+18 - turn off w
+TIME 1771079 	 72 	 72
+
+DRAW NEW SCENE!!!! 9 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 819
+ray_trace = 800
+ray_trace = 816
+ray_trace = 800
+ray_trace = 814
+ray_trace = 800
+ray_trace = 861
+ray_trace = 840
+18 - turn off w
+TIME 2383523 	 72 	 72
+DRAW NEW SCENE!!!! 9 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 816
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 844
+ray_trace = 840
+18 - turn off w
+TIME 2052851 	 72 	 72
+DRAW NEW SCENE!!!! 9 
+0 - turn off w
+TIME 1308969 	 72 	 0
+DRAW NEW SCENE!!!! 9 
+ray_trace = 812
+ray_trace = 820
+ray_trace = 811
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 809
+ray_trace = 800
+ray_trace = 813
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 816
+ray_trace = 800
+ray_trace = 820
+ray_trace = 800
+ray_trace = 840
+ray_trace = 840
+18 - turn off w
+TIME 1937254 	 72 	 72
+DRAW NEW SCENE!!!! 9 
+0 - turn off w
+TIME 1325618 	 72 	 0
+
+
+=========================
+36 2416185 29225
+32 2272851 25977
+20 2172851 16317
+

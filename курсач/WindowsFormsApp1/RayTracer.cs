@@ -14,8 +14,8 @@ namespace WindowsFormsApp1
 
     struct Ray
     {
-        public readonly Point3D Vec;
-        public readonly Point3D Beg;
+        public Point3D Vec;
+        public Point3D Beg;
 
         public Ray(Point3D vec, Point3D beg) : this()
         {

@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
         public VectorTexture(TextureType textype, PointF[] pol)
         {
             Tt = textype;
-            _im = Image.FromFile("C:/Users/kiv09/Documents/sem5/cg_cp/курсач/WindowsFormsApp1/33.jpg");
+            _im = Image.FromFile("C:/Users/kiv09/Documents/sem5/cg_cp/курсач/WindowsFormsApp1/33.jpeg");
 
             Tb = new TextureBrush(_im);
             _pol = new PointF[4];

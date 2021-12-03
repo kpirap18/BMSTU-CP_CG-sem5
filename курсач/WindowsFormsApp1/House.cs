@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             _center = new Point3D();
             _center = c;
             S = new Side[8];
-            La = new Point3D[2];
+            La = new Point3D[2]; // громоотвод
             const int l = 60;
             int height = 36 * count;
             for (int i = 0; i < 8; i++)
@@ -144,7 +144,7 @@ namespace WindowsFormsApp1
         {
             var min = new Trace { Dist = -1, Per = new Point3D(0, 0, 0) };
             var per = new Point3D();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 8; i++)
             {
                 double t = (-_pl[i][0] * ray.Beg.X - _pl[i][1] * ray.Beg.Y - _pl[i][2] * ray.Beg.Z - _pl[i][3]) /
                            (_pl[i][0] * ray.Vec.X + _pl[i][1] * ray.Vec.Y + _pl[i][2] * ray.Vec.Z);
@@ -152,6 +152,7 @@ namespace WindowsFormsApp1
                 per.X = (float)(ray.Beg.X + ray.Vec.X * t);
                 per.Y = (float)(ray.Beg.Y + ray.Vec.Y * t);
                 per.Z = (float)(ray.Beg.Z + ray.Vec.Z * t);
+
 
                 if (per.X >= Math.Min(S[i].P[0].X, S[i].P[2].X) &&
                     per.X <= Math.Max(S[i].P[0].X, S[i].P[2].X) &&
@@ -326,15 +327,15 @@ namespace WindowsFormsApp1
         }
 
 
-        private void DrawWindow(Graphics g, int k, Lightning ll, bool[] sh, Point3D p, bool f, int w, int h)
+        private void DrawWindow(Graphics g, int k, Lightning ll, bool[] sh, Point3D p, int w, int h)
         {
             for (int i = 0; i < 2 * _kol; i++)
             {
-                W[k][i].DrawWindow(g, sh, k, ll, _pl[k], p, f, w, h);
+                W[k][i].DrawWindow(g, sh, k, ll, _pl[k], p, w, h);
             }
         }
 
-        public void DrawHouse(PictureBox pictureBox1, Lightning light, Point3D angle, bool[] sh, Point3D p, bool f)
+        public void DrawHouse(PictureBox pictureBox1, Lightning light, Point3D angle, bool[] sh, Point3D p)
         {
             var bmp = new Bitmap(pictureBox1.Image);
             Graphics g = Graphics.FromImage(bmp);
@@ -353,10 +354,10 @@ namespace WindowsFormsApp1
                     pol[i][j].Y = S[i].P[j].Y;
                 }
             }
-            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x65, 0x43, 0x21)), pol[4]);
-            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x65, 0x43, 0x21)), pol[5]);
-            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x65, 0x43, 0x21)), pol[6]);
-            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x65, 0x43, 0x21)), pol[7]);
+            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x40, 0x23, 0x16)), pol[4]);
+            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x40, 0x23, 0x16)), pol[5]);
+            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x40, 0x23, 0x16)), pol[6]);
+            g.FillPolygon(new SolidBrush(System.Drawing.Color.FromArgb(0x40, 0x23, 0x16)), pol[7]);
 
             Brush b;
             double yg = angle.X % 360;
@@ -374,8 +375,8 @@ namespace WindowsFormsApp1
                     b = new SolidBrush(System.Drawing.Color.FromArgb((int)(DrawGr(1, light) * 70), System.Drawing.Color.White));
                     g.FillPolygon(b, pol[1]);
                 }
-                DrawWindow(g, 0, ll, sh, p, f, pictureBox1.Width, pictureBox1.Height);
-                DrawWindow(g, 1, ll, sh, p, f, pictureBox1.Width, pictureBox1.Height);
+                DrawWindow(g, 0, ll, sh, p, pictureBox1.Width, pictureBox1.Height);
+                DrawWindow(g, 1, ll, sh, p, pictureBox1.Width, pictureBox1.Height);
             }
             if (yg >= 90 && yg <= 180 || yg <= -180 && yg >= -270)
             {
@@ -391,8 +392,8 @@ namespace WindowsFormsApp1
                     b = new SolidBrush(System.Drawing.Color.FromArgb((int)(DrawGr(3, light) * 70), System.Drawing.Color.White));
                     g.FillPolygon(b, pol[3]);
                 }
-                DrawWindow(g, 0, ll, sh, p, f, pictureBox1.Width, pictureBox1.Height);
-                DrawWindow(g, 3, ll, sh, p, f, pictureBox1.Width, pictureBox1.Height);
+                DrawWindow(g, 0, ll, sh, p, pictureBox1.Width, pictureBox1.Height);
+                DrawWindow(g, 3, ll, sh, p, pictureBox1.Width, pictureBox1.Height);
             }
             if (yg >= 180 && yg <= 270 || yg <= -90 && yg >= -180)
             {
@@ -408,8 +409,8 @@ namespace WindowsFormsApp1
                     b = new SolidBrush(System.Drawing.Color.FromArgb((int)(DrawGr(3, light) * 70), System.Drawing.Color.White));
                     g.FillPolygon(b, pol[3]);
                 }
-                DrawWindow(g, 2, ll, sh, p, f, pictureBox1.Width, pictureBox1.Height);
-                DrawWindow(g, 3, ll, sh, p, f, pictureBox1.Width, pictureBox1.Height);
+                DrawWindow(g, 2, ll, sh, p, pictureBox1.Width, pictureBox1.Height);
+                DrawWindow(g, 3, ll, sh, p, pictureBox1.Width, pictureBox1.Height);
             }
             if (yg >= 270 && yg <= 360 || yg <= 0 && yg >= -90)
             {
@@ -425,8 +426,8 @@ namespace WindowsFormsApp1
                     b = new SolidBrush(System.Drawing.Color.FromArgb((int)(DrawGr(1, light) * 70), System.Drawing.Color.White));
                     g.FillPolygon(b, pol[1]);
                 }
-                DrawWindow(g, 2, ll, sh, p, f, pictureBox1.Width, pictureBox1.Height);
-                DrawWindow(g, 1, ll, sh, p, f, pictureBox1.Width, pictureBox1.Height);
+                DrawWindow(g, 2, ll, sh, p, pictureBox1.Width, pictureBox1.Height);
+                DrawWindow(g, 1, ll, sh, p, pictureBox1.Width, pictureBox1.Height);
             }
             g.DrawLine(new Pen(System.Drawing.Color.Brown), La[0].PointF, La[1].PointF);
             g.DrawLine(new Pen(System.Drawing.Color.Brown), La[0].PointF.X - 1, La[0].PointF.Y, La[1].PointF.X - 1, La[1].PointF.Y);

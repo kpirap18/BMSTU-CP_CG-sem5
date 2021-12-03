@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < rm.Count; i++)
             {
                 SubModels.Add(new List<Point3D>());
-                float sublength = r.Next((int)length / 4 * (int)(h - subl[i].Y) / h / 6, (int)length / 4 * 5 * (int)(h - subl[i].Y) / h);
+                float sublength = r.Next((int)length / 4 * (int)(h - subl[i].Y) / h, (int)length / 4 * 2 * (int)(h - subl[i].Y) / h);
                 float l = 0;
                 x = subl[i].X;
                 y = subl[i].Y;
@@ -238,7 +238,7 @@ namespace WindowsFormsApp1
         static public void Draworeol(PointF p1, PointF p2, Graphics gr)
         {
 
-            Color c = Color.FromArgb(160, Color.Azure);
+            Color c = Color.FromArgb(160, Color.Plum);
             for (int i = 0; i < 10; i++)
             {
                 c = Color.FromArgb(c.A * (9 - i) / 10, c);
@@ -247,13 +247,13 @@ namespace WindowsFormsApp1
             }
         }
 
-        public void DrawLightning(PictureBox picBox)
+        public void DrawLightning(PictureBox picBox, bool f)
         {
             var l = new Lightning(this);
             const int compar = 20;
             var bmp = new Bitmap(picBox.Image);
             Graphics gr = Graphics.FromImage(bmp);
-            Color c1 = Color.FromArgb(255, Color.Azure);
+            Color c1 = System.Drawing.Color.FromArgb(0xff, 0xfc, 0xfe);
             var pen = new Pen(c1);
 
             for (int i = 1; i < Model.Count; i++)
@@ -267,9 +267,6 @@ namespace WindowsFormsApp1
                                      l.Model[i].X,
                                      l.Model[i].Y);
 
-                    Draworeol(new PointF(l.Model[i - 1].X, l.Model[i - 1].Y),
-                              new PointF(l.Model[i].X, l.Model[i].Y), gr);
-
                     gr.DrawLine(pen, l.Model[i - 1].X - 1,
                                      l.Model[i - 1].Y,
                                      l.Model[i].X - 1,
@@ -279,7 +276,16 @@ namespace WindowsFormsApp1
                                      l.Model[i - 1].Y,
                                      l.Model[i].X + 1,
                                      l.Model[i].Y);
+                    
+
+                    Draworeol(new PointF(l.Model[i - 1].X, l.Model[i - 1].Y),
+                    new PointF(l.Model[i].X, l.Model[i].Y), gr);
                 }
+                //if (f)
+                //{
+                //    picBox.Image = bmp;
+                //    Application.DoEvents();
+                //}
             }
 
             for (int i = 0; i < SubModels.Count; i++)
@@ -297,8 +303,14 @@ namespace WindowsFormsApp1
 
                         Draworeol(new PointF(l.SubModels[i][j - 1].X, l.SubModels[i][j - 1].Y),
                                   new PointF(l.SubModels[i][j].X, l.SubModels[i][j].Y), gr);
+
                     }
                 }
+                //if (f)
+                //{
+                //    picBox.Image = bmp;
+                //    Application.DoEvents();
+                //}
             }
 
             picBox.Image = bmp;
@@ -308,8 +320,8 @@ namespace WindowsFormsApp1
         {
             var path = new GraphicsPath();
             path.AddEllipse(p.X - 400, p.Y - 300, 800, 600);
-            var pthGrBrush = new PathGradientBrush(path) { CenterColor = Color.FromArgb(170, Color.Azure) };
-            Color[] colors = { Color.FromArgb(0, Color.Azure) };
+            var pthGrBrush = new PathGradientBrush(path) { CenterColor = Color.FromArgb(170, Color.White) };
+            Color[] colors = { Color.FromArgb(0, Color.Plum) };
             pthGrBrush.SurroundColors = colors;
             gr.FillEllipse(pthGrBrush, p.X - 400, p.Y - 300, 800, 600);
         }

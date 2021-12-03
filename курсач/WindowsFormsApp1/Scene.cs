@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             _p.Y = _house.S[0].P[2].Y + 225;
             _p.Z = 5000;
             Oldy = 0;
-            _window = true;
+            withpause = true;
         }
 
         private double Oldy { get; set; }
@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
             var bmp = new Bitmap(_picture.Image);
             Graphics g = Graphics.FromImage(bmp);
             var t = new SimpleTexture(TextureType.Sky, new Point(0, 0),
-                                      new Point(_picture.Width, _picture.Height / 2 + 30));
+                                      new Point(_picture.Width, _picture.Height / 3 * 2 - 90));
             t.DrawTexture(g, (int)_ya);
             var p = new Point3D(_light.Model[0].X, _light.Model[0].Y, _light.Model[0].Z);
             Transform.TurnY(_center, p, _ya);
@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
 
         private void DrawHouse()
         {
-            _house.DrawHouse(_picture, _light, new Point3D((float)_ya, (float)_yan, 0), _sh, _p, _window);
+            _house.DrawHouse(_picture, _light, new Point3D((float)_ya, (float)_yan, 0), _sh, _p);
         }
 
         private void DrawShadow()
@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
         {
             var bmp1 = new Bitmap(_picture.Width, _picture.Height);
             Graphics g = Graphics.FromImage(bmp1);
-            var t = new SimpleTexture(TextureType.Ground, new Point(0, _picture.Height / 2 + 30),
+            var t = new SimpleTexture(TextureType.Ground, new Point(0, _picture.Height / 3 * 2 - 90),
                                       new Point(_picture.Width, _picture.Height));
             t.DrawTexture(g, (int)_ya);
             _picture.Image = bmp1;
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
 
         private void DrawLightning(Lightning light)
         {
-            light.DrawLightning(_picture);
+            light.DrawLightning(_picture, withpause);
         }
 
         public void Timer1()
@@ -89,6 +89,7 @@ namespace WindowsFormsApp1
             Transform.TurnY(_center, p, _ya);
             _sh = _house.InShadow2(p);
             DrawScene();
+            //System.Threading.Thread.Sleep(1);
         }
 
         public void Timer2()
@@ -99,11 +100,12 @@ namespace WindowsFormsApp1
             {
                 int k = r.Next(0, 2 * Kol - 1);
                 _house.W[i][k].Light = Math.Abs(_house.W[i][k].Light - 1);
-                //k = r.Next(0, 2 * Kol - 1);
-                //_house.W[i][k].Light = Math.Abs(_house.W[i][k].Light - 1);
+                k = r.Next(0, 2 * Kol - 1);
+                _house.W[i][k].Light = Math.Abs(_house.W[i][k].Light - 1);
             }
             _flags = false;
             DrawScene();
+            //System.Threading.Thread.Sleep(1);
         }
 
         public void LightOn()
@@ -210,7 +212,6 @@ namespace WindowsFormsApp1
             }
             var l = new Lightning(model, subModels);
             DrawLightning(l);
-            //System.Console.WriteLine("IN trace {0}", co);
         }
 
         private void Init_l()
@@ -221,6 +222,7 @@ namespace WindowsFormsApp1
 
         public void Button(int e)
         {
+            System.Console.WriteLine("ddddd {0}", e);
             if (e == 1)
             {
                 _yan = 2;
@@ -237,6 +239,13 @@ namespace WindowsFormsApp1
                 Oldy = _yan;
                 Init_l();
                 Transform.TurnY(_center, _l, -_yan);
+                DrawScene();
+            }
+            if (e == 3)
+            {
+                //Oldy = _yan;
+                Init_l();
+                Transform.TurnX(_center, _l, _yan);
                 DrawScene();
             }
             _yan = 0;
@@ -266,11 +275,6 @@ namespace WindowsFormsApp1
             System.Console.WriteLine("TIME {0} \t {1} \t {2}", t2 - t, Kol * 8, c);
         }
 
-        public void WindowsChange()
-        {
-            _window = !_window;
-            DrawScene();
-        }
 
         public void FLoarChange()
         {
@@ -283,8 +287,6 @@ namespace WindowsFormsApp1
             DrawScene();
         }
 
-
-        private bool _window;
         private Shadow _s;
         private readonly PictureBox _picture;
         private readonly Point3D _center;
@@ -298,6 +300,7 @@ namespace WindowsFormsApp1
         private Point3D _l;
         private bool[] _sh;
         public int Kol;
+        public bool withpause;
     }
 
 }

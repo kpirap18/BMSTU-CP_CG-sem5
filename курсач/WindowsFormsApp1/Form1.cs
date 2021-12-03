@@ -28,12 +28,17 @@ namespace WindowsFormsApp1
         {
             timer1.Enabled = !timer1.Enabled;
             timer2.Enabled = true;
+            _scene.withpause = false;
         }
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
+            System.Console.WriteLine("YYYEEESSS");
             _scene.Xd = e.X;
             _scene.Flag = true;
             _scene.Button(1);
+
+            // pictureBox1.Focus();
+            // pictureBox1.Invalidate();
         }
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -49,18 +54,23 @@ namespace WindowsFormsApp1
         }
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            this.timer2.Interval = int.Parse(toolStripTextBox2.Text);
-            _scene.Click();            
+            _scene.withpause = true;
+            this.timer2.Interval = int.Parse(toolStripTextBox3.Text);
+            _scene.Click();
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
             {
                 _scene.Button(1);
             }
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
             {
                 _scene.Button(2);
+            }
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.A)
+            {
+                _scene.Button(3);
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
@@ -77,7 +87,7 @@ namespace WindowsFormsApp1
         }
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            _scene.WindowsChange();
+
         }
         private void myTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -111,6 +121,26 @@ namespace WindowsFormsApp1
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton5_Click_1(object sender, EventArgs e)
+        {
+            _scene.LightOn();
+        }
+
+        private void toolStripTextBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            _scene.LightOff();
+        }
+
+        private void toolStripLabel1_Click_1(object sender, EventArgs e)
         {
 
         }
