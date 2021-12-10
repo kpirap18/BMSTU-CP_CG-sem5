@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
@@ -71,19 +71,5 @@ Windows [Электронный ресурс].
 \newblock Режим доступа:
   \url{https://www.intel.ru/content/www/ru/ru/products/sku/208658/intel-core-i51135g7-processor-8m-cache-up-to-4-20-ghz/specifications.html}
   (дата обращения: 04.09.2021).
-
-\bibitem{csharplang1}
-\selectlanguageifdefined{russian}
-СТруктура DateTime [Электронный ресурс].
-\newblock Режим доступа:
-  \url{https://docs.microsoft.com/ru-ru/dotnet/api/system.datetime?view=netframework-4.8}
-  (дата обращения: 09.10.2021).
-
-\bibitem{csharplang2}
-\selectlanguageifdefined{russian}
-Свойство DateTime.Now.Ticks [Электронный ресурс].
-\newblock Режим доступа:
-  \url{https://docs.microsoft.com/ru-ru/dotnet/api/system.datetime.ticks?view=netcore-3.1}
-  (дата обращения: 09.10.2021).
 
 \end{thebibliography}

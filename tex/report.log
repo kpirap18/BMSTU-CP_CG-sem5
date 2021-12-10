@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  2 DEC 2021 01:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.29)  7 DEC 2021 00:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1345,16 +1345,11 @@ LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line
 
 (c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-) [25]
-Overfull \hbox (18.89772pt too wide) in paragraph at lines 202--202
- []\T2A/cmtt/m/n/14.4 Color.FromArgb(0x40, 0x23, 0x16) // Пример представления 
-цвета[] 
- []
-
-) [26]
+) [25]) [26]
 \openout2 = `30-impl.aux'.
 
- (./30-impl.tex
+
+(./30-impl.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
 [27
 
@@ -1368,27 +1363,23 @@ C#, а это объектно-
  []
 
 [28]
-<img/shema.png, id=434, 705.38531pt x 468.24937pt>
+<img/shema.png, id=434, 386.19281pt x 575.14874pt>
 File: img/shema.png Graphic file (type png)
 <use img/shema.png>
 Package pdftex.def Info: img/shema.png  used on input line 77.
-(pdftex.def)             Requested size: 514.36731pt x 341.43306pt.
-
-Overfull \hbox (44.89682pt too wide) in paragraph at lines 77--77
- [] 
- []
+(pdftex.def)             Requested size: 458.538pt x 682.86613pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [29] [30 <./img/shema.png>]
-<img/inter.png, id=446, 880.03781pt x 514.92375pt>
+<img/inter.png, id=446, 878.53218pt x 513.41812pt>
 File: img/inter.png Graphic file (type png)
 <use img/inter.png>
 Package pdftex.def Info: img/inter.png  used on input line 83.
-(pdftex.def)             Requested size: 486.27824pt x 284.52756pt.
+(pdftex.def)             Requested size: 486.86725pt x 284.52756pt.
 
-Overfull \hbox (16.80775pt too wide) in paragraph at lines 83--83
+Overfull \hbox (17.39676pt too wide) in paragraph at lines 83--83
  [] 
  []
 
@@ -1400,27 +1391,27 @@ Overfull \hbox (0.73743pt too wide) in paragraph at lines 96--97
 ски за счет средств,
  []
 
-<img/prog_res/t1.png, id=454, 868.74562pt x 507.39563pt>
+<img/prog_res/t1.png, id=454, 880.03781pt x 519.44063pt>
 File: img/prog_res/t1.png Graphic file (type png)
 <use img/prog_res/t1.png>
 Package pdftex.def Info: img/prog_res/t1.png  used on input line 107.
-(pdftex.def)             Requested size: 330.12677pt x 192.81233pt.
-<img/prog_res/t2.png, id=456, 866.48718pt x 505.13719pt>
+(pdftex.def)             Requested size: 334.41785pt x 197.38948pt.
+<img/prog_res/t2.png, id=456, 877.02657pt x 514.17094pt>
 File: img/prog_res/t2.png Graphic file (type png)
 <use img/prog_res/t2.png>
 Package pdftex.def Info: img/prog_res/t2.png  used on input line 118.
-(pdftex.def)             Requested size: 329.26854pt x 191.95412pt.
+(pdftex.def)             Requested size: 333.27356pt x 195.387pt.
 [32 <./img/prog_res/t1.png>]
-<img/prog_res/t3.png, id=465, 866.48718pt x 509.65407pt>
+<img/prog_res/t3.png, id=465, 877.77937pt x 512.66531pt>
 File: img/prog_res/t3.png Graphic file (type png)
 <use img/prog_res/t3.png>
 Package pdftex.def Info: img/prog_res/t3.png  used on input line 129.
-(pdftex.def)             Requested size: 329.26854pt x 193.67055pt.
-<img/prog_res/t4.png, id=467, 865.73438pt x 504.38437pt>
+(pdftex.def)             Requested size: 333.55963pt x 194.81483pt.
+<img/prog_res/t4.png, id=467, 875.52094pt x 512.66531pt>
 File: img/prog_res/t4.png Graphic file (type png)
 <use img/prog_res/t4.png>
 Package pdftex.def Info: img/prog_res/t4.png  used on input line 140.
-(pdftex.def)             Requested size: 328.98248pt x 191.66805pt.
+(pdftex.def)             Requested size: 332.70142pt x 194.81483pt.
  [33 <./img/prog_res/t2.png> <./img/prog_res/t3.png>]) [34 <./img/prog_res/t4.p
 ng>]
 \openout2 = `40-research.aux'.
@@ -1436,23 +1427,23 @@ ng>]
 <img/prog_res/s1.png, id=491, 879.285pt x 515.67656pt>
 File: img/prog_res/s1.png Graphic file (type png)
 <use img/prog_res/s1.png>
-Package pdftex.def Info: img/prog_res/s1.png  used on input line 53.
+Package pdftex.def Info: img/prog_res/s1.png  used on input line 52.
 (pdftex.def)             Requested size: 351.70778pt x 206.26697pt.
 
 
-LaTeX Warning: Command \cyrl invalid in math mode on input line 65.
+LaTeX Warning: Command \cyrl invalid in math mode on input line 64.
 
 
-LaTeX Warning: Command \cyru invalid in math mode on input line 65.
+LaTeX Warning: Command \cyru invalid in math mode on input line 64.
 
 
-LaTeX Warning: Command \cyrch invalid in math mode on input line 65.
+LaTeX Warning: Command \cyrch invalid in math mode on input line 64.
 
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 65.
+LaTeX Warning: Command \cyre invalid in math mode on input line 64.
 
 
-LaTeX Warning: Command \cyrishrt invalid in math mode on input line 65.
+LaTeX Warning: Command \cyrishrt invalid in math mode on input line 64.
 
 Missing character: There is no л in font cmr12!
 Missing character: There is no у in font cmr12!
@@ -1461,19 +1452,19 @@ Missing character: There is no е in font cmr12!
 Missing character: There is no й in font cmr12!
 [36 <./img/prog_res/s1.png>]
 
-LaTeX Warning: Command \cyrl invalid in math mode on input line 72.
+LaTeX Warning: Command \cyrl invalid in math mode on input line 71.
 
 
-LaTeX Warning: Command \cyru invalid in math mode on input line 72.
+LaTeX Warning: Command \cyru invalid in math mode on input line 71.
 
 
-LaTeX Warning: Command \cyrch invalid in math mode on input line 72.
+LaTeX Warning: Command \cyrch invalid in math mode on input line 71.
 
 
-LaTeX Warning: Command \cyre invalid in math mode on input line 72.
+LaTeX Warning: Command \cyre invalid in math mode on input line 71.
 
 
-LaTeX Warning: Command \cyrishrt invalid in math mode on input line 72.
+LaTeX Warning: Command \cyrishrt invalid in math mode on input line 71.
 
 Missing character: There is no л in font cmr12!
 Missing character: There is no у in font cmr12!
@@ -1487,7 +1478,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <img/res/e4.png, id=510, 462.528pt x 346.896pt>
 File: img/res/e4.png Graphic file (type png)
 <use img/res/e4.png>
-Package pdftex.def Info: img/res/e4.png  used on input line 137.
+Package pdftex.def Info: img/res/e4.png  used on input line 136.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
  [38]) [39 <./img/res/e4.png>]
 \openout2 = `50-conclusion.aux'.
@@ -1502,19 +1493,25 @@ Package pdftex.def Info: img/res/e4.png  used on input line 137.
 
  (./51-biblio.tex
 (./report.bbl
-Underfull \hbox (badness 3009) in paragraph at lines 19--24
+Underfull \hbox (badness 10000) in paragraph at lines 19--24
 \T2A/cmr/m/n/14.4 Ре-жим до-сту-па: []$\T2A/cmtt/m/n/14.4 https : / / www . gra
 phicon . ru / oldgr / courses / cg99 /
  []
 
 
-Underfull \hbox (badness 2261) in paragraph at lines 55--59
+Underfull \hbox (badness 3281) in paragraph at lines 55--59
 []\T2A/cmr/m/n/14.4 Документация по С# [Элек-трон-ный ре-сурс].  Ре-жим до-сту-
 па:
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 62--66
+Underfull \hbox (badness 1728) in paragraph at lines 55--59
+[]$\T2A/cmtt/m/n/14.4 https : / / docs . microsoft . com / ru-[]ru / dotnet / c
+sharp/$[] \T2A/cmr/m/n/14.4 (да-та об-ра-ще-
+ []
+
+
+Underfull \hbox (badness 2617) in paragraph at lines 62--66
 []\T2A/cmr/m/n/14.4 Windows [Элек-трон-ный ре-сурс].  Ре-жим до-сту-па: []$\T2A
 /cmtt/m/n/14.4 https : / / www .
  []
@@ -1543,40 +1540,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--74
 ]4-[]20-[]ghz /
  []
 
-
-Underfull \hbox (badness 3525) in paragraph at lines 77--81
-[]\T2A/cmr/m/n/14.4 СТруктура DateTime [Элек-трон-ный ре-сурс].  Ре-жим до-сту-
-па:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--81
-[]$\T2A/cmtt/m/n/14.4 https : / / docs . microsoft . com / ru-[]ru / dotnet / a
-pi / system . datetime ?
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--88
-[]$\T2A/cmtt/m/n/14.4 https : / / docs . microsoft . com / ru-[]ru / dotnet / a
-pi / system . datetime .
- []
-
-[41
+)) [41
 
 
 
 
-])) [42] (./report.aux (./01-contents.aux) (./02-intro.aux)
-(./10-analysis.aux) (./20-design.aux) (./30-impl.aux) (./40-research.aux)
-(./50-conclusion.aux) (./51-biblio.aux))
+] (./report.aux (./01-contents.aux) (./02-intro.aux) (./10-analysis.aux)
+(./20-design.aux) (./30-impl.aux) (./40-research.aux) (./50-conclusion.aux)
+(./51-biblio.aux))
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 1718146388A1AD410A81900D6BC9DF76;10574.
  ) 
 Here is how much of TeX's memory you used:
- 38214 strings out of 478893
- 875845 string characters out of 5867671
- 1295701 words of memory out of 5000000
- 55189 multiletter control sequences out of 15000+600000
+ 38209 strings out of 478893
+ 875780 string characters out of 5867671
+ 1295632 words of memory out of 5000000
+ 55187 multiletter control sequences out of 15000+600000
  411949 words of font info for 42 fonts, out of 8000000 for 9000
  1038 hyphenation exceptions out of 8191
  106i,9n,102p,1287b,614s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1594,10 +1573,10 @@ dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2021/texmf-dist/fonts
 /type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
 er/sftt1440.pfb>
-Output written on report.pdf (40 pages, 5076255 bytes).
+Output written on report.pdf (39 pages, 4769728 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
- 552 compressed objects within 6 object streams
- 153 named destinations out of 1000 (max. 500000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 542 compressed objects within 6 object streams
+ 150 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 
